@@ -1,0 +1,220 @@
+:root{
+    --color-bg:#F8F6F2;
+    --color-black: #3F3F3F;
+    --color-accent: #DFB19C;
+    --color-line: rgba(223, 177, 156, 0.63);
+    --color-author: rgba(223, 177, 156, 0.14);
+    --color-ol-line: rgba(223, 177, 156, 0.57);
+    --color-footer: #D2AA98;
+    --color-soc: #D9D9D9;
+    --color-hover: #C89A85;
+    --transition-hover: .3s;
+    --ralation: calc(1440 / 100vw);
+    --color-bread-link: rgba(63, 63, 63, 0.50);
+    --color-auth-bg: #C6C3BF;
+    --color-error: #FF7777;
+    --color-auth-font: #B0B0B0;
+    --header-padding: calc((100vw - 1218px) / 2)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-black);
+    cursor: default;
+  }
+
+  a:hover{
+    color: var(--color-hover) !important;
+    cursor: pointer;
+  }
+
+
+body.login {
+    background-color: var(--color-auth-bg);
+}
+
+#login{
+    width: 871px;
+    height: fit-content;
+    background-color: var(--color-bg);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50px;
+    overflow-y: auto;
+}
+
+.login .message,
+.login #login_error{
+    background-color: unset;
+    border: unset;
+    box-shadow: unset;
+    text-align: center;
+}
+
+#resetpassform,
+#lostpasswordform{
+    background-color: unset;
+    border: unset;
+    box-shadow: unset;
+    transition: opacity .5s;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    background-color: unset;
+    border: unset;
+    box-shadow: unset;
+}
+
+#login>h1,
+.language-switcher{
+    display: none;
+}
+
+.login label{
+    font-size: 16px;
+}
+
+.login form .input{
+    width: 370px;
+    height: 50px;
+    padding: 0 29px;
+    border-radius: 100px;
+    border: 1px solid var(--color-accent);
+    outline: none;
+    color: var(--color-auth-font);
+    cursor: pointer;
+    outline: none;
+}
+
+.login form p{
+    width: fit-content;
+}
+
+.login form .input:focus{
+    box-shadow: unset;
+}
+
+#login form p.submit{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.wp-core-ui .button{
+    width: 370px;
+    height: 50px;
+    padding: 0 29px;
+    border-radius: 100px;
+    border: 1px solid var(--color-accent);
+    outline: none;
+    color: var(--color-auth-font);
+    cursor: pointer;
+}
+
+.wp-core-ui .button-primary,
+.wp-core-ui .button-secondary,
+.wp-generate-pw,
+.wp-core-ui .button{
+    width: 370px;
+    height: 50px;
+    padding: 0 29px;
+    border-radius: 100px;
+    border: 1px solid var(--color-accent);
+    outline: none;
+    color: white;
+    cursor: pointer;
+    background: var(--color-accent);
+    font-size: 16px;
+}
+
+.wp-core-ui .button-primary:hover{
+    background: var(--color-hover);
+    box-shadow: unset;
+    border: unset;
+}
+
+.wp-core-ui .button-secondary:hover,
+.wp-generate-pw:hover,
+.wp-core-ui .button:hover{
+    border-color: var(--color-hover);
+    color: white;
+    background: var(--color-hover);
+}
+
+.wp-core-ui .button:focus{
+    background-color: var(--color-hover);
+    border-color: var(--color-hover);
+    color: inherit;
+    box-shadow: unset;
+    outline: unset;
+    outline-offset: unset;
+}
+
+.button-primary:focus{
+    box-shadow: unset;
+}
+
+.dashicons-hidden:before {
+    content: var(--show);
+    cursor: pointer;
+}
+
+.dashicons-visibility:before {
+    content: var(--hide);
+    cursor: pointer;
+}
+
+.login .button.wp-hide-pw{
+    position: absolute;
+    top: 3px;
+    right: 10px;
+}
+
+.login .button.wp-hide-pw:hover,
+.login .button.wp-hide-pw:focus{
+    border-color: unset !important;
+    box-shadow: unset !important;
+    outline: unset !important;
+    border: unset !important;
+}
+
+@media (max-width: 1279px) {
+    #login {
+    width: 728px;
+    }
+
+    #loginform{
+        gap: 30px;
+    }
+}
+
+@media (max-width: 767px){
+    #login {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 20px;
+    overflow-y: scroll;
+    top: 0;
+    }
+
+    .login label{
+        font-size: 14px;
+    }
+
+    .login form .input{
+        width: 100%;
+    }
+}
